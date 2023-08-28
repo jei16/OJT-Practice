@@ -1,0 +1,52 @@
+﻿┌─────────────────────────────────────────────────────────────────────────────────┐
+│DELIVERED TO  :                                     DATE          :  08/23/2023  │
+│CUSTOMER NAME :  HYPERMARKET MUNTINLUPA             PLAN DEL DATE :  10/11/2022  │
+│ADDRESS       :                                     ORDER NUMBER  :  RSO 1327    │
+│CUSTOMER CODE :  600483                             ORDER DATE    :  10/05/2022  │
+├──────────────────────────────────────────┬─────┬───────────────────────┬────────┤
+│                   ITEM                   │     │       QUANTITY        │REMARKS/│
+├──────────┬───────────────────────────────┤     ├───────────┬───────────┤        │
+│   CODE   │          DESCRIPTION          │UNIT │  ORDERED  │ DELIVERED │ AMOUNT │
+├──────────┼───────────────────────────────┼─────┼─────┬─────┼─────┬─────┼────────┤
+│          │                               │     │ REG │ OBC │ALLO │TOTAL│        │
+│          │                               │     ├─────┼─────┼─────┼─────┤        │
+│3160002   │1. Cathedral Window Singles    │ pcs │  2  │     │     │  2  │        │
+│3100001   │2. Black Forest Cake           │ pcs │  2  │     │     │  2  │        │
+│3100004   │3. Chocolate Cherry Torte      │ pcs │  2  │     │     │  2  │        │
+│3130001   │4. Crema De Fruta Small        │ pcs │  1  │     │     │  1  │        │
+│3100014   │5. Royal Fudge Cake With Tobler│ pcs │  2  │     │     │  2  │        │
+│          │one                            │     │     │     │     │     │        │
+│3100041   │6. Chocolate Mousse Cake 2020  │ pcs │  1  │     │     │  1  │        │
+│3520099   │7. Mocha 8x12 With Filling     │ pcs │  1  │     │     │  1  │        │
+│3520102   │8. Mocha 9 Round With Filling  │ pcs │  3  │     │     │  3  │        │
+│3510105   │9. Choco 8x12 With Filling     │ pcs │  3  │     │     │  3  │        │
+│3510108   │10. Choco 9 Round With Filling │ pcs │  3  │     │     │  3  │        │
+│3200692   │11. Ube Greeting Cake 9rd      │ pcs │  1  │     │     │  1  │        │
+│3200681   │12. Strawberry Greeting Cake 9 │ pcs │  1  │     │     │  1  │        │
+│          │Round                          │     │     │     │     │     │        │
+│3200686   │13. Vanilla - Marble Greeting C│ pcs │  1  │     │     │  1  │        │
+│          │ake 8x12                       │     │     │     │     │     │        │
+│3200688   │14. Vanilla - Marble Greeting C│ pcs │  2  │     │     │  2  │        │
+│          │ake 9 Round                    │     │     │     │     │     │        │
+│3210007   │15. Luscious Caramel 9 Round   │ pcs │  2  │     │     │  2  │        │
+│3210018   │16. Coffee Caramel Cake        │ pcs │  2  │     │     │  2  │        │
+│3210006   │17. Luscious Caramel 8x12      │ pcs │  1  │     │     │  1  │        │
+│3200715   │18. Candy Pop Cake 9rd         │ pcs │  2  │     │     │  2  │        │
+│3060008   │19. Classic Mocha Whole Roll   │ pcs │  4  │     │     │  4  │        │
+│3050007   │20. Dulce De Leche Whole Roll  │ pcs │  4  │     │     │  4  │        │
+│3050010   │21. Chocolate Overload Whole Ro│ pcs │  6  │     │     │  6  │        │
+│          │ll                             │     │     │     │     │     │        │
+│3050019   │22. Brazo De Mercedes Whole Rol│ pcs │  1  │     │     │  1  │        │
+│          │l 2020                         │     │     │     │     │     │        │
+│3280001   │23. Eggpie                     │ pcs │  3  │     │     │  3  │        │
+│3190022   │24. Fluffy Mamon               │ pcs │ 40  │     │     │ 40  │        │
+│3190023   │25. Special Fluffy Mamon       │ pcs │  8  │     │     │  8  │        │
+│3190007   │26. Chiffon Cake Slice         │ pcs │ 15  │     │     │ 15  │        │
+│3190009   │27. Double Dutch Cake Slice    │ pcs │ 12  │     │     │ 12  │        │
+│3190014   │28. Mocha Marble Cake Slice    │ pcs │ 12  │     │     │ 12  │        │
+└──────────┴───────────────────────────────┴─────┴─────┴─────┴─────┴─────┴────────┘
+
+
+Checked By     :                             PD Officer    : ____________________
+
+Receiver/Store : ____________________        T & D Checker : ____________________

@@ -1,0 +1,16 @@
+print("hello  World")
+
+x= input("Input any characters: ")
+y= input("Input the index of the character: ")
+
+try:
+    z=x+","+" "+"character counterpart of the index "+y+":"+ " "+x[int(y)]
+    print(z)
+except:
+    print("sorry mali po")
+
+
+
+ 
+
+
