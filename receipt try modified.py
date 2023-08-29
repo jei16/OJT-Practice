@@ -16,41 +16,9 @@ txt = "{a:┌<1}{b:─^82}{c:┐>1}"
 print(txt.format(a="", b="", c=""))
 
 #
-xx = len(delTo)
-if xx  > 32:
-    newdelTo = str(delTo[:31]+"-")
-    transfer = str(delTo[31:xx+1])
-
-    txt1p1 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
-    print(
+txt1p1 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
+print(
     txt1p1.format(
-        a="",
-        b="DELIVERED TO  :  ",
-        c=newdelTo,
-        c1="",
-        d="DATE          :  ",
-        e="",
-        f="",
-    )
-)
-    
-    txt1p1ext = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
-    print(
-    txt1p1ext.format(
-        a="",
-        b="",
-        c=transfer,
-        c1="",
-        d="",
-        e="",
-        f="",
-    )
-)
-
-else:
-    txt1p1 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
-    print(
-            txt1p1.format(
         a="",
         b="DELIVERED TO  :  ",
         c=delTo,
@@ -60,7 +28,6 @@ else:
         f="",
     )
 )
-
 
 txt1p2 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
 print(
