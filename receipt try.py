@@ -3,7 +3,7 @@ txt = "{a:┌<1}{b:─^82}{c:┐>1}"
 print(txt.format(a="", b="", c=""))
 
 #
-txt1p1 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
+txt1p1 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
 print(
     txt1p1.format(
         a="",
@@ -16,7 +16,7 @@ print(
     )
 )
 
-txt1p2 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
+txt1p2 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
 print(
     txt1p1.format(
         a="",
@@ -29,14 +29,14 @@ print(
     )
 )
 
-txt1p3 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
+txt1p3 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
 print(
     txt1p1.format(
         a="", b="ADDRESS       :  ", c="", c1="", d="ORDER NUMBER  :  ", e="", f=""
     )
 )
 
-txt1p4 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
+txt1p4 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
 print(
     txt1p1.format(
         a="", b="CUSTOMER CODE :  ", c="", c1="", d="ORDER DATE    :  ", e="", f=""
@@ -209,12 +209,15 @@ for x in range(2):
     print(space.format(a=""))
 
 #
-txt11 = "{a:<20}{b:_<28}{c:^2}{d:<17}{e:_<16}"
+txt11 = "{a:<20}{b:_^22}{c:^4}{d:<17}{e:_^20}"
 print(txt11.format(a="Checked By     :  ", b="", c="", d="PD Officer    :  ", e=""))
 
 #
 print(space.format(a=""))
 
 #
-txt12 = "{a:<20}{b:_<28}{c:^2}{d:<17}{e:_<16}"
+txt12 = "{a:<20}{b:_^22}{c:^4}{d:<17}{e:_^20}"
 print(txt12.format(a="Receiver/Store :  ", b="", c="", d="T & D Checker :  ", e=""))
+
+#
+print(space.format(a=""))
