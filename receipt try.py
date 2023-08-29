@@ -3,16 +3,16 @@ txt = "{a:┌<1}{b:─^82}{c:┐>1}"
 print(txt.format(a="", b="", c=""))
 
 #
-txt1p1 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<17}{e:<13}{f:│>1}"
-print(txt1p1.format(a="", b="DELIVERED TO  :  ", c="", c1="", d="DATE          :  ", e="", f=""))
+txt1p1 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
+print(txt1p1.format(a="", b="DELIVERED TO  :  ", c="", c1="", d="DATE          :  ", e="08/29/2023", f=""))
 
-txt1p2 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<17}{e:<13}{f:│>1}"
-print(txt1p1.format(a="", b="CUSTOMER NAME :  ", c="", c1="", d="PLAN DEL DATE :  ", e="", f=""))
+txt1p2 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
+print(txt1p1.format(a="", b="CUSTOMER NAME :  ", c="GEN. T. DE LEON", c1="", d="PLAN DEL DATE :  ", e="", f=""))
 
-txt1p3 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<17}{e:<13}{f:│>1}"
+txt1p3 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
 print(txt1p1.format(a="", b="ADDRESS       :  ", c="", c1="", d="ORDER NUMBER  :  ", e="", f=""))
 
-txt1p4 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<17}{e:<13}{f:│>1}"
+txt1p4 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
 print(txt1p1.format(a="", b="CUSTOMER CODE :  ", c="", c1="", d="ORDER DATE    :  ", e="", f=""))
 
 #
@@ -132,7 +132,7 @@ txt9 = "{a:│<1}{b:^10}{c:│^1}{d:^32}{e:│^1}{f:^5}{g:│^1}{h:^5}{i:│^1}{
 print(
     txt9.format(
         a="",
-        b="",
+        b="3050019",
         c="",
         d="",
         e="",
