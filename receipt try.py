@@ -4,16 +4,44 @@ print(txt.format(a="", b="", c=""))
 
 #
 txt1p1 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
-print(txt1p1.format(a="", b="DELIVERED TO  :  ", c="", c1="", d="DATE          :  ", e="08/29/2023", f=""))
+print(
+    txt1p1.format(
+        a="",
+        b="DELIVERED TO  :  ",
+        c="",
+        c1="",
+        d="DATE          :  ",
+        e="08/29/2023",
+        f="",
+    )
+)
 
 txt1p2 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
-print(txt1p1.format(a="", b="CUSTOMER NAME :  ", c="GEN. T. DE LEON", c1="", d="PLAN DEL DATE :  ", e="", f=""))
+print(
+    txt1p1.format(
+        a="",
+        b="CUSTOMER NAME :  ",
+        c="GEN. T. DE LEON",
+        c1="",
+        d="PLAN DEL DATE :  ",
+        e="",
+        f="",
+    )
+)
 
 txt1p3 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
-print(txt1p1.format(a="", b="ADDRESS       :  ", c="", c1="", d="ORDER NUMBER  :  ", e="", f=""))
+print(
+    txt1p1.format(
+        a="", b="ADDRESS       :  ", c="", c1="", d="ORDER NUMBER  :  ", e="", f=""
+    )
+)
 
 txt1p4 = "{a:│<1}{b:<17}{c:<34}{c1:^2}{d:<17}{e:<12}{f:│>1}"
-print(txt1p1.format(a="", b="CUSTOMER CODE :  ", c="", c1="", d="ORDER DATE    :  ", e="", f=""))
+print(
+    txt1p1.format(
+        a="", b="CUSTOMER CODE :  ", c="", c1="", d="ORDER DATE    :  ", e="", f=""
+    )
+)
 
 #
 txt2 = "{a:├<1}{b:─^43}{c:┬^1}{d:─^5}{e:┬^1}{f:─^23}{g:┬^1}{h:─^8}{i:┤<1}"
@@ -138,13 +166,13 @@ print(
         e="",
         f="",
         g="",
-        h="",
+        h="1",
         i="",
-        j="",
+        j="1",
         k="",
-        l="",
+        l="1",
         m="",
-        n="",
+        n="1",
         o="",
         p="",
         q="",
@@ -174,3 +202,19 @@ print(
         q="",
     )
 )
+
+#
+space = "{a:<84}"
+for x in range(2):
+    print(space.format(a=""))
+
+#
+txt11 = "{a:<20}{b:_<28}{c:^2}{d:<17}{e:_<16}"
+print(txt11.format(a="Checked By     :  ", b="", c="", d="PD Officer    :  ", e=""))
+
+#
+print(space.format(a=""))
+
+#
+txt12 = "{a:<20}{b:_<28}{c:^2}{d:<17}{e:_<16}"
+print(txt12.format(a="Receiver/Store :  ", b="", c="", d="T & D Checker :  ", e=""))
