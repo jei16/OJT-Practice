@@ -3,10 +3,17 @@ txt = "{a:┌<1}{b:─^82}{c:┐>1}"
 print(txt.format(a="", b="", c=""))
 
 #
-txt1 = "{a:│<1}{b:^82}{c:│>1}"
+txt1p1 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<30}{e:│>1}"
+print(txt1p1.format(a="", b="DELIVERED TO  :  ", c="", c1="", d="DATE          :  ", e=""))
 
-for x in range(4):
-    print(txt1.format(a="", b="", c=""))
+txt1p2 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<30}{e:│>1}"
+print(txt1p1.format(a="", b="CUSTOMER NAME :  ", c="", c1="", d="PLAN DEL DATE :  ", e=""))
+
+txt1p3 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<30}{e:│>1}"
+print(txt1p1.format(a="", b="ADDRESS       :  ", c="", c1="", d="ORDER NUMBER  :  ", e=""))
+
+txt1p4 = "{a:│<1}{b:<17}{c:<33}{c1:^2}{d:<30}{e:│>1}"
+print(txt1p1.format(a="", b="CUSTOMER CODE :  ", c="", c1="", d="ORDER DATE    :  ", e=""))
 
 #
 txt2 = "{a:├<1}{b:─^43}{c:┬^1}{d:─^5}{e:┬^1}{f:─^23}{g:┬^1}{h:─^8}{i:┤<1}"
@@ -14,7 +21,11 @@ print(txt2.format(a="", b="", c="", d="", e="", f="", g="", h="", i=""))
 
 #
 txt3 = "{a:│<1}{b:^43}{c:│>1}{d:^5}{e:│^1}{f:^23}{g:│^1}{h:^8}{i:│<1}"
-print(txt3.format(a="", b="ITEM", c="", d="", e="", f="QUANTITY", g="", h="REMARKS/", i=""))
+print(
+    txt3.format(
+        a="", b="ITEM", c="", d="", e="", f="QUANTITY", g="", h="REMARKS/", i=""
+    )
+)
 
 #
 txt4 = "{a:├<1}{b:─^10}{c:┬^1}{d:─^32}{e:┤^1}{f:^5}{g:├^1}{h:─^11}{i:┬^1}{j:─^11}{k:┤^1}{l:^8}{m:│>1}"
@@ -28,7 +39,19 @@ print(
 txt5 = "{a:│<1}{b:^10}{c:│^1}{d:^32}{e:│^1}{f:^5}{g:│^1}{h:^11}{i:│^1}{j:^11}{k:│^1}{l:^8}{m:│>1}"
 print(
     txt5.format(
-        a="", b="CODE", c="", d="DESCRIPTION", e="", f="UNIT", g="", h="ORDERED", i="", j="DELIVERED", k="", l="AMOUNT", m=""
+        a="",
+        b="CODE",
+        c="",
+        d="DESCRIPTION",
+        e="",
+        f="UNIT",
+        g="",
+        h="ORDERED",
+        i="",
+        j="DELIVERED",
+        k="",
+        l="AMOUNT",
+        m="",
     )
 )
 
@@ -69,11 +92,11 @@ print(
         g="",
         h="REG",
         i="",
-        j="",
+        j="OBC",
         k="",
-        l="",
+        l="ALLO",
         m="",
-        n="",
+        n="TOTAL",
         o="",
         p="",
         q="",
@@ -134,7 +157,7 @@ print(
     txt10.format(
         a="",
         b="",
-        c="", 
+        c="",
         d="",
         e="",
         f="",
