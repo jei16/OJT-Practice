@@ -8,8 +8,16 @@ plndeldate = input("Plan Del date: ")
 orderNo = input("Order Number: ")
 orderDate = input("Order Date: ")
 code = input("Code: ")
-desc = input("Description: ")
+# desc = input("Description: ")
 unit = input("Unit: ")
+
+
+description = [
+    ["3190022", "1. Fluffy Mamon", "pcs", "", "270", "", "270", ""],
+    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
+    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
+    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""]
+]
 
 #
 txt = "{a:┌<1}{b:─^82}{c:┐>1}"
@@ -17,49 +25,49 @@ print(txt.format(a="", b="", c=""))
 
 #
 xx = len(delTo)
-if xx  > 32:
-    newdelTo = str(delTo[:31]+"-")
-    transfer = str(delTo[31:xx+1])
+if xx > 32:
+    newdelTo = str(delTo[:31] + "-")
+    transfer = str(delTo[31 : xx + 1])
 
     txt1p1 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
     print(
-    txt1p1.format(
-        a="",
-        b="DELIVERED TO  :  ",
-        c=newdelTo,
-        c1="",
-        d="DATE          :  ",
-        e="",
-        f="",
+        txt1p1.format(
+            a="",
+            b="DELIVERED TO  :  ",
+            c=newdelTo,
+            c1="",
+            d="DATE          :  ",
+            e="",
+            f="",
+        )
     )
-)
-    
+
     txt1p1ext = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
     print(
-    txt1p1ext.format(
-        a="",
-        b="",
-        c=transfer,
-        c1="",
-        d="",
-        e="",
-        f="",
+        txt1p1ext.format(
+            a="",
+            b="",
+            c=transfer,
+            c1="",
+            d="",
+            e="",
+            f="",
+        )
     )
-)
 
 else:
     txt1p1 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
     print(
-            txt1p1.format(
-        a="",
-        b="DELIVERED TO  :  ",
-        c=delTo,
-        c1="",
-        d="DATE          :  ",
-        e=date,
-        f="",
+        txt1p1.format(
+            a="",
+            b="DELIVERED TO  :  ",
+            c=delTo,
+            c1="",
+            d="DATE          :  ",
+            e=date,
+            f="",
+        )
     )
-)
 
 
 txt1p2 = "{a:│<1}{b:<17}{c:<32}{c1:^4}{d:<17}{e:<12}{f:│>1}"
@@ -215,27 +223,28 @@ print(
 
 #
 txt9 = "{a:│<1}{b:^10}{c:│^1}{d:<32}{e:│^1}{f:^5}{g:│^1}{h:^5}{i:│^1}{j:^5}{k:│^1}{l:^5}{m:│^1}{n:^5}{o:│^1}{p:^8}{q:│>1}"
-print(
-    txt9.format(
-        a="",
-        b=code,
-        c="",
-        d=desc,
-        e="",
-        f=unit,
-        g="",
-        h="1",
-        i="",
-        j="1",
-        k="",
-        l="1",
-        m="",
-        n="1",
-        o="",
-        p="",
-        q="",
+for x in description:
+    print(
+        txt9.format(
+            a="",
+            b=x[0],
+            c="",
+            d=x[1],
+            e="",
+            f=x[2],
+            g="",
+            h=x[3],
+            i="",
+            j=x[4],
+            k="",
+            l=x[5],
+            m="",
+            n=x[6],
+            o="",
+            p=x[7],
+            q="",
+        )
     )
-)
 
 #
 txt10 = "{a:└<1}{b:─^10}{c:┴^1}{d:─^32}{e:┴^1}{f:─^5}{g:┴^1}{h:─^5}{i:┴^1}{j:─^5}{k:┴^1}{l:─^5}{m:┴^1}{n:─^5}{o:┴^1}{p:─^8}{q:┘>1}"
