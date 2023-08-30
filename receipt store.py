@@ -11,16 +11,13 @@ code = input("Code: ")
 # desc = input("Description: ")
 unit = input("Unit: ")
 
-
+w = None
 description = [
-    ["3190022", "1. Fluffy Mamon", "pcs", "", "270", "", "270", ""],
-    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
-    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
-    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
-    ["3190007", "2. Vanilla - Marble Greeting Cake 9 Round", "pcs", "", "140", "", "140", ""],
+    ["3190022", "Fluffy Mamon", "pcs", "", "270", "", "270", ""],
+    ["3190007", "Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
     [
         "3190007",
-        "2. Brazo De Mercedes Whole Roll 2020",
+        "Vanilla - Marble Greeting Cake 9 Round",
         "pcs",
         "",
         "140",
@@ -28,9 +25,30 @@ description = [
         "140",
         "",
     ],
-    ["3190007", "2. Brazo De Mercedes Whole Roller 2020", "pcs", "1", "", "", "1", ""],
-    ["3190007", "2. Chiffon Cake Slice", "pcs", "", "140", "", "140", ""],
+    [
+        "3190007",
+        "Brazo De Mercedes Whole Roll 2020",
+        "pcs",
+        "",
+        "140",
+        "",
+        "140",
+        "",
+    ],
+    ["3190007", "Brazo De Mercedes Whole Roller 2020", "pcs", "1", "", "", "1", ""],
+    ["3190007", "Chiffon Cake Slicess", "pcs", "", "140", "", "140", ""],
+    [
+        "3190007",
+        "Chiffon Cake Slices Mercedes Whole Roller",
+        "pcs",
+        "",
+        "140",
+        "",
+        "140",
+        "",
+    ],
 ]
+
 
 #
 txt = "{a:┌<1}{b:─^82}{c:┐>1}"
@@ -236,14 +254,14 @@ print(
 
 #
 txt9 = "{a:│<1}{b:^10}{c:│^1}{d:<32}{e:│^1}{f:^5}{g:│^1}{h:^5}{i:│^1}{j:^5}{k:│^1}{l:^5}{m:│^1}{n:^5}{o:│^1}{p:^8}{q:│>1}"
-for x in description:
-    if len(x[1]) <= 32:
+for w, x in enumerate(description, start=1):
+    if len(x[1]) <= (32 - (len(str(w)) + 2)):
         print(
             txt9.format(
                 a="",
                 b=x[0],
                 c="",
-                d=x[1],
+                d=f"{w}. {x[1]}",
                 e="",
                 f=x[2],
                 g="",
@@ -260,18 +278,18 @@ for x in description:
             )
         )
     else:
-        newDesc = str(x[1][:31] + "-")
-        newDesc2 = str(x[1][:32])
-        transferDesc = str(x[1][31 : len(x[1]) + 1])
-        transferDesc2 = str(x[1][32 : len(x[1]) + 1])
+        newDesc = str(x[1][: 31 - (len(str(w)) + 2)] + "-")
+        newDesc2 = str(x[1][: 32 - (len(str(w)) + 2)])
+        transferDesc = str(x[1][31 - (len(str(w)) + 2) : len(x[1]) + 1])
+        transferDesc2 = str(x[1][32 - (len(str(w)) + 2) : len(x[1]) + 1])
 
-        if x[1][31] != " ":
+        if x[1][31 - (len(str(w)) + 2)] != " ":
             print(
                 txt9.format(
                     a="",
                     b=x[0],
                     c="",
-                    d=newDesc,
+                    d=f"{w}. {newDesc}",
                     e="",
                     f=x[2],
                     g="",
@@ -315,7 +333,7 @@ for x in description:
                     a="",
                     b=x[0],
                     c="",
-                    d=newDesc2,
+                    d=f"{w}. {newDesc2}",
                     e="",
                     f=x[2],
                     g="",
