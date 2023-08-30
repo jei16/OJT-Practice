@@ -36,3 +36,6 @@ print(xy)
 
 x = "ccccc"
 print(len(str(x)) -2)
+
+for i in range(6):
+    print("x")
