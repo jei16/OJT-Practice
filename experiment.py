@@ -39,3 +39,30 @@ print(len(str(x)) -2)
 
 for i in range(6):
     print("x")
+
+    a= ["a","b","c"]
+    print(len(a))
+
+for x in range(3):
+    print(x)
+
+itemdetailed = [
+    [
+        "GELATIN/SALAD",
+        [
+            ["Cathedral Gelatin", "1", "2", "3", "4"],
+            ["Cathedral Church", "1", "2", "3", "4"],
+            ["Cathedral Window", "1", "2", "3", "4"],
+        ],
+    ],
+    [
+        "CAKE CHOCO",
+        [
+            ["Cathedral Choco", "1", "2", "3", "4"],
+            ["Cathedral Late", "1", "2", "3", "4"],
+            ["Cathedral Cake", "1", "2", "3", "4"],
+        ],
+    ],
+]
+
+print(itemdetailed[0][-1][0][0])

@@ -1,0 +1,5 @@
+- loop ng each ITEM (ex cathdral window)
+-adjust pag lumagpas yung product description
+- loop ng item specification (Gelatin/Salad)
+
+-loop ng plant names (by columns)
