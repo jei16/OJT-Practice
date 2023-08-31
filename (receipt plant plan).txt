@@ -1,5 +1,5 @@
-- loop ng each ITEM (ex cathdral window)
+- loop ng each ITEM (ex cathdral window) ok na
 -adjust pag lumagpas yung product description
-- loop ng item specification (Gelatin/Salad)
+- loop ng item specification (Gelatin/Salad) ok na
 
 -loop ng plant names (by columns)
