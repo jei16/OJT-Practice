@@ -10,17 +10,14 @@ itemdetailed = [
             ["Cathedral Gelatin", "1", "2", "3", "4"],
             ["Cathedral Church", "1", "2", "3", "4"],
             ["Cathedral Window", "1", "2", "3", "4"],
-         
         ],
     ],
-
     [
         "CHOCOLATE",
         [
             ["Cathedral Gelatin", "1", "2", "3", "4"],
             ["Cathedral Church", "1", "2", "3", "4"],
             ["Cathedral Window", "1", "2", "3", "4"],
-         
         ],
     ],
     [
@@ -30,10 +27,10 @@ itemdetailed = [
             ["Cathedral Church", "1", "2", "3", "4"],
             ["Cathedral Window", "1", "2", "3", "4"],
             ["Cathedral Gelatin", "1", "2", "3", "4"],
-        ]
-    ]
+        ],
+    ],
 ]
-     
+
 
 #
 brdr1 = "{a:┌^1}{b:─^28}{c:┬^1}{d:─^6}{e:┬^1}{f:─^6}{g:┬^1}{h:─^6}{i:┬^1}{j:─^6}{k:┐^1}"
@@ -117,7 +114,7 @@ for items in range(len(itemdetailed) - 1):
         brdr3.format(a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k="")
     )
 
-
+# Last Table
 brdr4last = "{a:│^1}{b:<56}{c:│^1}"
 print(brdr4last.format(a="", b=itemdetailed[-1][0], c=""))
 
