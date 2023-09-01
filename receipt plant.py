@@ -15,7 +15,7 @@ itemdetailed = [
                 "4",
             ],
             ["Cathedral Church", "1", "2", "3", "4"],
-            ["Cathedral WindowCathedral WindowCathedral Window", "1", "2", "3", "4"],
+            ["Cathedral WindowCathedral W indowCathedral Window", "1", "2", "3", "4"],
         ],
     ],
     [
@@ -38,9 +38,9 @@ itemdetailed = [
     [
         "STRAWBERRY",
         [
-            ["Mango", "1", "2", "3", "4"],
+            ["Mango Cathedral Cake Cathedral Cake", "1", "2", "3", "4"],
             ["Cathedral Cake", "1", "2", "3", "4"],
-            ["Cathedral 2", "1", "2", "3", "4"],
+            ["Cathedral 2Cathedral 2Cathedral 2Cathedral 2", "1", "2", "3", "4"],
         ],
     ],
 ]
@@ -323,56 +323,255 @@ brdr5 = "{a:├^1}{b:─^28}{c:┬^1}{d:─^6}{e:┬^1}{f:─^6}{g:┬^1}{h:─^
 print(brdr5.format(a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""))
 
 for q in range(len(itemdetailed[-1][-1]) - 1):
-    brdr6lasts = (
+    if len(itemdetailed[-1][-1][q][0]) <= 28:
+        brdr6lasts = (
+            "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+        )
+        print(
+            brdr6lasts.format(
+                a="",
+                b=itemdetailed[-1][-1][q][0],
+                c="",
+                d=itemdetailed[-1][-1][q][1],
+                e="",
+                f=itemdetailed[-1][-1][q][2],
+                g="",
+                h=itemdetailed[-1][-1][q][3],
+                i="",
+                j=itemdetailed[-1][-1][q][4],
+                k="",
+            )
+        )
+        brdr7 = "{a:├^1}{b:─^28}{c:┼^1}{d:─^6}{e:┼^1}{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+        print(
+            brdr7.format(
+                a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+            )
+        )
+    else:
+        newDesc = str(itemdetailed[-1][-1][q][0][:27] + "-")
+        newDesc2 = str(itemdetailed[-1][-1][q][0][:28])
+        transferDesc = str(
+            itemdetailed[-1][-1][q][0][27 : len(itemdetailed[-1][-1][q][0]) + 1]
+        )
+        transferDesc2 = str(
+            itemdetailed[-1][-1][q][0][28 : len(itemdetailed[-1][-1][q][0]) + 1]
+        )
+
+        if str(itemdetailed[-1][-1][q][0][27]) != " ":
+            brdr6 = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+            print(
+                brdr6.format(
+                    a="",
+                    b=newDesc,
+                    c="",
+                    d=itemdetailed[-1][-1][q][1],
+                    e="",
+                    f=itemdetailed[-1][-1][q][2],
+                    g="",
+                    h=itemdetailed[-1][-1][q][3],
+                    i="",
+                    j=itemdetailed[-1][-1][q][4],
+                    k="",
+                )
+            )
+
+            brdr6ext = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+            print(
+                brdr6ext.format(
+                    a="",
+                    b=transferDesc,
+                    c="",
+                    d="",
+                    e="",
+                    f="",
+                    g="",
+                    h="",
+                    i="",
+                    j="",
+                    k="",
+                )
+            )
+
+            brdr7 = "{a:├^1}{b:─^28}{c:┼^1}{d:─^6}{e:┼^1}{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+            print(
+                brdr7.format(
+                    a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+                )
+            )
+        else:
+            brdr6 = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+            print(
+                brdr6.format(
+                    a="",
+                    b=newDesc2,
+                    c="",
+                    d=itemdetailed[-1][-1][q][1],
+                    e="",
+                    f=itemdetailed[-1][-1][q][2],
+                    g="",
+                    h=itemdetailed[-1][-1][q][3],
+                    i="",
+                    j=itemdetailed[-1][-1][q][4],
+                    k="",
+                )
+            )
+
+            brdr6ext = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+            print(
+                brdr6ext.format(
+                    a="",
+                    b=transferDesc2,
+                    c="",
+                    d="",
+                    e="",
+                    f="",
+                    g="",
+                    h="",
+                    i="",
+                    j="",
+                    k="",
+                )
+            )
+
+            brdr7 = "{a:├^1}{b:─^28}{c:┼^1}{d:─^6}{e:┼^1}{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+            print(
+                brdr7.format(
+                    a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+                )
+            )
+
+
+# last
+if len(itemdetailed[-1][-1][-1][0]) <= 28:
+    brdr6last = (
         "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
     )
     print(
-        brdr6lasts.format(
+        brdr6last.format(
             a="",
-            b=itemdetailed[-1][-1][q][0],
+            b=itemdetailed[-1][-1][-1][0],
             c="",
-            d=itemdetailed[-1][-1][q][1],
+            d=itemdetailed[-1][-1][-1][1],
             e="",
-            f=itemdetailed[-1][-1][q][2],
+            f=itemdetailed[-1][-1][-1][2],
             g="",
-            h=itemdetailed[-1][-1][q][3],
+            h=itemdetailed[-1][-1][-1][3],
             i="",
-            j=itemdetailed[-1][-1][q][4],
+            j=itemdetailed[-1][-1][-1][4],
             k="",
         )
     )
-    brdr7 = (
-        "{a:├^1}{b:─^28}{c:┼^1}{d:─^6}{e:┼^1}{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+
+    brdr7last = (
+        "{a:└^1}{b:─^28}{c:┴^1}{d:─^6}{e:┴^1}{f:─^6}{g:┴^1}{h:─^6}{i:┴^1}{j:─^6}{k:┘^1}"
     )
+
     print(
-        brdr7.format(a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k="")
+        brdr7last.format(
+            a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+        )
+    )
+else:
+    newDesc = str(itemdetailed[-1][-1][-1][0][:27] + "-")
+    newDesc2 = str(itemdetailed[-1][-1][-1][0][:28])
+    transferDesc = str(
+        itemdetailed[-1][-1][-1][0][27 : len(itemdetailed[-1][-1][-1][0]) + 1]
+    )
+    transferDesc2 = str(
+        itemdetailed[-1][-1][-1][0][28 : len(itemdetailed[-1][-1][-1][0]) + 1]
     )
 
-# last
+    if str(itemdetailed[-1][-1][-1][0][27]) != " ":
+        brdr6 = (
+            "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+        )
+        print(
+            brdr6.format(
+                a="",
+                b=newDesc,
+                c="",
+                d=itemdetailed[-1][-1][-1][1],
+                e="",
+                f=itemdetailed[-1][-1][-1][2],
+                g="",
+                h=itemdetailed[-1][-1][-1][3],
+                i="",
+                j=itemdetailed[-1][-1][-1][4],
+                k="",
+            )
+        )
 
-brdr6last = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
-print(
-    brdr6last.format(
-        a="",
-        b=itemdetailed[-1][-1][-1][0],
-        c="",
-        d=itemdetailed[-1][-1][-1][1],
-        e="",
-        f=itemdetailed[-1][-1][-1][2],
-        g="",
-        h=itemdetailed[-1][-1][-1][3],
-        i="",
-        j=itemdetailed[-1][-1][-1][4],
-        k="",
-    )
-)
+        brdr6ext = (
+            "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+        )
+        print(
+            brdr6ext.format(
+                a="",
+                b=transferDesc,
+                c="",
+                d="",
+                e="",
+                f="",
+                g="",
+                h="",
+                i="",
+                j="",
+                k="",
+            )
+        )
 
-brdr7last = (
-    "{a:└^1}{b:─^28}{c:┴^1}{d:─^6}{e:┴^1}{f:─^6}{g:┴^1}{h:─^6}{i:┴^1}{j:─^6}{k:┘^1}"
-)
+        brdr7last = "{a:└^1}{b:─^28}{c:┴^1}{d:─^6}{e:┴^1}{f:─^6}{g:┴^1}{h:─^6}{i:┴^1}{j:─^6}{k:┘^1}"
+        print(
+            brdr7last.format(
+                a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+            )
+        )
+    else:
+        brdr6 = (
+            "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+        )
+        print(
+            brdr6.format(
+                a="",
+                b=newDesc2,
+                c="",
+                d=itemdetailed[-1][-1][-1][1],
+                e="",
+                f=itemdetailed[-1][-1][-1][2],
+                g="",
+                h=itemdetailed[-1][-1][-1][3],
+                i="",
+                j=itemdetailed[-1][-1][-1][4],
+                k="",
+            )
+        )
 
-print(
-    brdr7last.format(a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k="")
-)
+        brdr6ext = (
+            "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+        )
+        print(
+            brdr6ext.format(
+                a="",
+                b=transferDesc2,
+                c="",
+                d="",
+                e="",
+                f="",
+                g="",
+                h="",
+                i="",
+                j="",
+                k="",
+            )
+        )
+
+        brdr7last = "{a:└^1}{b:─^28}{c:┴^1}{d:─^6}{e:┴^1}{f:─^6}{g:┴^1}{h:─^6}{i:┴^1}{j:─^6}{k:┘^1}"
+        print(
+            brdr7last.format(
+                a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+            )
+        )
+
 
 #
