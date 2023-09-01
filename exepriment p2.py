@@ -160,3 +160,48 @@ itemdetailed = [
 
 for x in range(len(itemdetailed[-1][-1]) - 1):
     print(x)
+
+
+itemdetailsed = [
+    [
+        "GELATIN/SALAD",
+        [
+            [
+                "Cathedral Gelatin Cathedral GelatinCathedral Gelatin",
+                "1",
+                "2",
+                "3",
+                "4",
+            ],
+            ["Cathedral Church", "1", "2", "3", "4"],
+            ["Cathedral Window", "1", "2", "3", "4"],
+        ],
+    ],
+    [
+        "CHOCOLATE",
+        [
+            ["Cathedral Gelatin", "1", "2", "3", "4"],
+            ["Cathedral Church", "1", "2", "3", "4"],
+            ["Cathedral Window", "1", "2", "3", "4"],
+        ],
+    ],
+    [
+        "CHEESE",
+        [
+            ["Cathedral Gelatin", "1", "2", "3", "4"],
+            ["Cathedral Church", "1", "2", "3", "4"],
+            ["Cathedral Window", "1", "2", "3", "4"],
+            ["Cathedral Gelatin", "1", "2", "3", "4"],
+        ],
+    ],
+    [
+        "STRAWBERRY",
+        [
+            ["Mango", "1", "2", "3", "4"],
+            ["Cathedral Cake", "1", "2", "3", "4"],
+            ["Cathedral 2", "1", "2", "3", "4"],
+        ],
+    ],
+]
+
+print(itemdetailsed[0][1][0][0][:27])
