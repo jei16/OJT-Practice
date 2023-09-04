@@ -22,7 +22,7 @@ itemdetailed = [
         "CHOCOLATE",
         [
             ["Cathedral Gelatin", "1", "2", "3", "4"],
-            ["Cathedral Church", "1", "2", "3", "4"],
+            ["Cathedral ChurchCathedral WindowCathedral", "1", "2", "3", "4"],
             ["Cathedral Window", "1", "2", "3", "4"],
         ],
     ],
