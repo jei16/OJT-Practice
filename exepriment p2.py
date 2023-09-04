@@ -205,3 +205,7 @@ itemdetailsed = [
 ]
 
 print(itemdetailsed[0][1][0][0][:27])
+
+hey = "6A ECQ REG"
+print(hey[:-3])
+print(hey[-3:])

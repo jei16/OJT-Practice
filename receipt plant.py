@@ -45,16 +45,29 @@ itemdetailed = [
     ],
 ]
 
+batches = ["6A ECQ REG","6B ECQ REG","6C ECQ REG","",""]
 
-#
-brdr1 = "{a:┌^1}{b:─^28}{c:┬^1}{d:─^6}{e:┬^1}{f:─^6}{g:┬^1}{h:─^6}{i:┬^1}{j:─^6}{k:┐^1}"
-print(brdr1.format(a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""))
 
-#
-brdr2 = "{a:│^1}{b:^28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+#first row
+brdr1_template = "{a:┌^1}{b:─^28}{c:┬^1}"
+
+
+dynamic_part = ""
+
+
+for batch in range(len(batches)):
+    dynamic_part += "{d:─^6}{e:┬^1}".format(d="",e="")
+    #dynamic_part += "{d:─^6}{e:┬^1}".format(d=batches[batch][:-4],e="")
+
+
+formatted_brdr1 = brdr1_template + dynamic_part + "{f:─^6}{g:┬^1}{h:─^6}{i:┬^1}{j:─^6}{k:┐^1}"
+print(formatted_brdr1.format(a="", b="", c="", f="", g="", h="", i="", j="", k=""))
+
+#second row
+brdr2 = "{a:│^1}{b:^28}{c:│^1}"+"{d:^6}{e:│^1}"+"{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
 print(
     brdr2.format(
-            a="", b=b[0], c="", d=b[1], e="", f=b[2], g="", h=b[3], i="", j=b[4], k=""
+            a="", b="PRODUCT DESCRIPTION", c="", d="6A ECQ", e="", f="REG", g="", h="OBC", i="", j="TOTAL", k=""
         )
     )
 
@@ -63,7 +76,7 @@ print(
 brdr2p1 = "{a:│^1}{b:^28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
 print(
     brdr2p1.format(
-            a="", b=b[0], c="", d=b[1], e="", f=b[2], g="", h=b[3], i="", j=b[4], k=""
+            a="", b="", c="", d="REG", e="", f="TOTAL", g="", h="TOTAL", i="", j="", k=""
         )
     )
 
