@@ -38,6 +38,16 @@ description = [
     ["3190007", "Brazo De Mercedes Whole Roller 2020", "pcs", "1", "", "", "1", ""],
     ["3190007", "Brazo De Mercedes Whole Roller 2021", "pcs", "1", "", "", "1", ""],
     ["3190007", "Brazo De Mercedes Whole Roller 2022", "pcs", "1", "", "", "1", ""],
+     [
+        "3190007",
+        "Chiffon Cake Slices Mercedes Half Roller",
+        "pcs",
+        "",
+        "140",
+        "",
+        "140",
+        "",
+    ],
     ["3190007", "Brazo De Mercedes Whole Roller 2023", "pcs", "1", "", "", "1", ""],
     ["3190007", "Chiffon Cake Slicess", "pcs", "", "140", "", "140", ""],
     [
