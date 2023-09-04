@@ -170,36 +170,45 @@ for items in range(len(itemdetailed) - 1):
         if len(itemdetailed[items][1][y][0]) <= 28:
             # seventh row looped
             brdr6_template = "{a:│^1}{b:<28}{c:│^1}"
-            
-            dynamic_part7= ""
+
+            dynamic_part7 = ""
 
             for ext in range(len(itemdetailed[items][1][y][1])):
-                dynamic_part7 += "{d:^6}{e:│^1}".format(d=ext,e="")
-            
-            formatted_brdr6 = brdr6_template + dynamic_part7 + "{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+                dynamic_part7 += "{d:^6}{e:│^1}".format(d=ext, e="")
+
+            formatted_brdr6 = (
+                brdr6_template
+                + dynamic_part7
+                + "{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+            )
 
             print(
-                    formatted_brdr6.format(
-                        a="",
-                        b=itemdetailed[items][1][y][0],
-                        c="",
-                        f=itemdetailed[items][1][y][2],
-                        g="",
-                        h=itemdetailed[items][1][y][3],
-                        i="",
-                        j=itemdetailed[items][1][y][4],
-                        k="",
-                    )
+                formatted_brdr6.format(
+                    a="",
+                    b=itemdetailed[items][1][y][0],
+                    c="",
+                    f=itemdetailed[items][1][y][2],
+                    g="",
+                    h=itemdetailed[items][1][y][3],
+                    i="",
+                    j=itemdetailed[items][1][y][4],
+                    k="",
                 )
-            
-            #eighth row looped
+            )
+
+            # eighth row looped
             brdr7_template = "{a:├^1}{b:─^28}{c:┼^1}"
 
             dynamic_part8 = ""
+
             for ext in range(len(itemdetailed[items][1][y][1])):
-                dynamic_part8 += "{d:─^6}{e:┼^1}".format(d=ext,e="")
-            
-            formatted_brdr7 = brdr7_template + dynamic_part8 + "{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+                dynamic_part8 += "{d:─^6}{e:┼^1}".format(d=ext, e="")
+
+            formatted_brdr7 = (
+                brdr7_template
+                + dynamic_part8
+                + "{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+            )
 
             print(
                 formatted_brdr7.format(
@@ -217,14 +226,25 @@ for items in range(len(itemdetailed) - 1):
             )
 
             if str(itemdetailed[items][1][y][0][27]) != " ":
-                brdr6 = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+                #
+                brdr6_template = "{a:│^1}{b:<28}{c:│^1}"  # "{d:^6}{e:│^1}""{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+
+                dynamic_part9 = ""
+
+                for ext in range(len(itemdetailed[items][1][y][1])):
+                    dynamic_part9 += "{d:^6}{e:│^1}".format(d=ext, e="")
+
+                formatted_brdr6 = (
+                    brdr6_template
+                    + dynamic_part9
+                    + "{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+                )
+
                 print(
-                    brdr6.format(
+                    formatted_brdr6.format(
                         a="",
                         b=newDesc,
                         c="",
-                        d=itemdetailed[items][1][y][1],
-                        e="",
                         f=itemdetailed[items][1][y][2],
                         g="",
                         h=itemdetailed[items][1][y][3],
@@ -233,15 +253,20 @@ for items in range(len(itemdetailed) - 1):
                         k="",
                     )
                 )
+                #
+                brdr6ext_template = "{a:│^1}{b:<28}{c:│^1}"#"{d:^6}{e:│^1}""{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+                
+                dynamic_part10 = ""
+                
+                for ext in range(len(itemdetailed[items][1][y][1])):
+                    dynamic_part10 += "{d:^6}{e:│^1}".format(d="", e="")
 
-                brdr6ext = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+                formatted_brdr6ext = brdr6ext_template + dynamic_part10 + "{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
                 print(
-                    brdr6ext.format(
+                    formatted_brdr6ext.format(
                         a="",
                         b=transferDesc,
                         c="",
-                        d="",
-                        e="",
                         f="",
                         g="",
                         h="",
@@ -250,7 +275,7 @@ for items in range(len(itemdetailed) - 1):
                         k="",
                     )
                 )
-
+                
                 brdr7 = "{a:├^1}{b:─^28}{c:┼^1}{d:─^6}{e:┼^1}{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
                 print(
                     brdr7.format(
