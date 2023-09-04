@@ -11,46 +11,54 @@ itemdetailed = [
         [
             [
                 "Cathedral Gelatin Cathedral GelatinCathedral",
-                "1",
+                ["11", "12", "13"],
                 "2",
                 "3",
                 "4",
             ],
-            ["Cathedral Church", "1", "2", "3", "4"],
-            ["Cathedral WindowCathedral W indowCathedral Window", "1", "2", "3", "4"],
+            ["Cathedral Church", ["11", "12", "13"], "2", "3", "4"],
+            [
+                "Cathedral WindowCathedral W indowCathedral Window",
+                ["11", "12", "13"],
+                "2",
+                "3",
+                "4",
+            ],
         ],
     ],
     [
         "CHOCOLATE",
         [
-            ["Cathedral Gelatin", "1", "2", "3", "4"],
-            ["Cathedral ChurchCathedral WindowCathedral", "1", "2", "3", "4"],
-            ["Cathedral Window", "1", "2", "3", "4"],
+            ["Cathedral Gelatin", ["11", "12", "13"], "2", "3", "4"],
+            [
+                "Cathedral ChurchCathedral WindowCathedral",
+                ["11", "12", "13"],
+                "2",
+                "3",
+                "4",
+            ],
+            ["Cathedral Window", ["11", "12", "13"], "2", "3", "4"],
         ],
     ],
     [
         "CHEESE",
         [
-            ["Cathedral Gelatin", "1", "2", "3", "4"],
-            ["Cathedral Church", "1", "2", "3", "4"],
-            ["Cathedral Window", "1", "2", "3", "4"],
-            ["Cathedral Gelatin", "1", "2", "3", "4"],
-        ],
-    ],
-    [
-        "PERIMUM CAKES",
-        [
-            ["Mango Cathedral Cake Cathedral Cake", "1", "2", "3", "4"],
-            ["Cathedral Cake", "1", "2", "3", "4"],
-            ["Chocolate Caramel Decadence Cake", "2", "1", "2", "3", "4"],
+            ["Cathedral Gelatin", ["11", "12", "13"], "2", "3", "4"],
+            ["Cathedral Church", ["11", "12", "13"], "2", "3", "4"],
         ],
     ],
     [
         "PREMIUM CAKES",
         [
-            ["Mango Cathedral Cake Cathedral Cake", "1", "2", "3", "4"],
-            ["Cathedral Cake", "1", "2", "3", "4"],
-            ["Chocolate Caramel Decadence Cake", "2", "1", "2", "3", "4"],
+            ["Mango Cathedral Cake Cathedral Cake", ["11", "12", "13"], "2", "3", "4"],
+            [
+                "Chocolate Caramel Decadence Cake",
+                ["11", "12", "13"],
+                "1",
+                "2",
+                "3",
+                "4",
+            ],
         ],
     ],
 ]
@@ -160,28 +168,42 @@ for items in range(len(itemdetailed) - 1):
     # Item Details
     for y in range(len(itemdetailed[items][1]) - 1):
         if len(itemdetailed[items][1][y][0]) <= 28:
+            # seventh row looped
+            brdr6_template = "{a:│^1}{b:<28}{c:│^1}"
             
-            brdr6 = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
-            print(
-                brdr6.format(
-                    a="",
-                    b=itemdetailed[items][1][y][0],
-                    c="",
-                    d=itemdetailed[items][1][y][1],
-                    e="",
-                    f=itemdetailed[items][1][y][2],
-                    g="",
-                    h=itemdetailed[items][1][y][3],
-                    i="",
-                    j=itemdetailed[items][1][y][4],
-                    k="",
-                )
-            )
+            dynamic_part7= ""
 
-            brdr7 = "{a:├^1}{b:─^28}{c:┼^1}{d:─^6}{e:┼^1}{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+            for ext in range(len(itemdetailed[items][1][y][1])):
+                dynamic_part7 += "{d:^6}{e:│^1}".format(d=ext,e="")
+            
+            formatted_brdr6 = brdr6_template + dynamic_part7 + "{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
+
             print(
-                brdr7.format(
-                    a="", b="", c="", d="", e="", f="", g="", h="", i="", j="", k=""
+                    formatted_brdr6.format(
+                        a="",
+                        b=itemdetailed[items][1][y][0],
+                        c="",
+                        f=itemdetailed[items][1][y][2],
+                        g="",
+                        h=itemdetailed[items][1][y][3],
+                        i="",
+                        j=itemdetailed[items][1][y][4],
+                        k="",
+                    )
+                )
+            
+            #eighth row looped
+            brdr7_template = "{a:├^1}{b:─^28}{c:┼^1}"
+
+            dynamic_part8 = ""
+            for ext in range(len(itemdetailed[items][1][y][1])):
+                dynamic_part8 += "{d:─^6}{e:┼^1}".format(d=ext,e="")
+            
+            formatted_brdr7 = brdr7_template + dynamic_part8 + "{f:─^6}{g:┼^1}{h:─^6}{i:┼^1}{j:─^6}{k:┤^1}"
+
+            print(
+                formatted_brdr7.format(
+                    a="", b="", c="", f="", g="", h="", i="", j="", k=""
                 )
             )
         else:
