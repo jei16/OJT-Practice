@@ -3,6 +3,7 @@ batches = [
     "6A ECQ REG",
     "6A ECQ OBC",
     "6B ECQ REG",
+    "6B ECQ OBC",
 ]
 
 itemdetailed = [
@@ -11,15 +12,15 @@ itemdetailed = [
         [
             [
                 "Cathedral Gelatin Cathedral GelatinCathedral",
-                ["11", "12", "13"],
+                ["11", "12", "13","14"],
                 "2",
                 "3",
                 "4",
             ],
-            ["Cathedral Church", ["11", "12", "13"], "2", "3", "4"],
+            ["Cathedral Church", ["11", "12", "13","14"], "2", "3", "4"],
             [
                 "Cathedral WindowCathedral W indowCathedral Window",
-                ["11", "12", "13"],
+                ["11", "12", "13","14"],
                 "2",
                 "3",
                 "4",
@@ -29,31 +30,38 @@ itemdetailed = [
     [
         "CHOCOLATE",
         [
-            ["Cathedral Gelatin", ["11", "12", "13"], "2", "3", "4"],
+            ["Cathedral Gelatin", ["11", "12", "13","14"], "2", "3", "4"],
             [
                 "Cathedral ChurchCathedral WindowCathedral",
-                ["11", "12", "13"],
+                ["11", "12", "13","14"],
                 "2",
                 "3",
                 "4",
             ],
-            ["Cathedral Window", ["11", "12", "13"], "2", "3", "4"],
+            ["Cathedral Window", ["11", "12", "13","14"], "2", "3", "4"],
         ],
     ],
     [
         "CHEESE",
         [
-            ["Cathedral Gelatin", ["11", "12", "13"], "2", "3", "4"],
-            ["Cathedral Church", ["11", "12", "13"], "2", "3", "4"],
+            ["Cathedral Gelatin", ["11", "12", "13","14"], "2", "3", "4"],
+            ["Cathedral Church", ["11", "12", "13","14"], "2", "3", "4"],
+        ],
+    ],
+      [
+        "CHEESEZIER",
+        [
+            ["Cathedral Gelatin", ["11", "12", "13","14"], "2", "3", "4"],
+            ["Cathedral Church", ["11", "12", "13","14"], "2", "3", "4"],
         ],
     ],
     [
         "PREMIUM CAKES",
         [
-            ["Mango Cathedral Cake Cathedral Cake", ["11", "12", "13"], "2", "3", "4"],
+            ["Mango Cathedral Cake Cathedral Cake", ["11", "12", "13","14"], "2", "3", "4"],
             [
                 "Chocolate Caramel Decadence Cake",
-                ["11", "12", "13"],
+                ["11", "12", "13","14"],
                 "1",
                 "2",
                 "3",
@@ -985,5 +993,33 @@ else:
             )
         )
 
+print()
+#line
+line_template="{a:^15}"
+dynamic_last = ""
+for batch in batches:
+    dynamic_last += "{b:^7}".format(b="")
 
-#
+formatted_line= line_template + dynamic_last + "{c:─<15}{d:─^7}{e:─^7}{f:─^7}"
+
+print(formatted_line.format(a="",c="",d="",e="",f=""))
+
+#Page Total
+pgtotal_template="{a:^16}"
+dynamic_last = ""
+for batch in batches:
+    dynamic_last += "{b:^7}".format(b="")
+
+formatted_pgtotal= pgtotal_template + dynamic_last + "{c:<14}{d:^7}{e:^7}{f:^7}"
+
+print(formatted_pgtotal.format(a="",c="PAGE TOTAL : ",d="1111",e="1111",f="1111"))
+print()
+#Grand Total
+grandtotal_template="{a:^16}"
+dynamic_last = ""
+for batch in batches:
+    dynamic_last += "{b:^7}".format(b="")
+
+formatted_grndtotal= pgtotal_template + dynamic_last + "{c:<14}{d:^7}{e:^7}{f:^7}"
+
+print(formatted_grndtotal.format(a="",c="GRAND TOTAL : ",d="1111",e="1111",f="1111"))
