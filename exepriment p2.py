@@ -210,3 +210,43 @@ hey = "6A ECQ REG"
 print(hey[:-3])
 print(hey[-3:])
 
+itemdetailed = [
+    [
+        "GELATIN/SALAD",
+        [
+            [
+                "Cathedral Gelatin Cathedral GelatinCathedral",
+                ["11", "12", "13"],
+                "2",
+                "3",
+                "4",
+            ],
+            ["Cathedral Church", ["11", "12", "13"], "2", "3", "4"],
+            [
+                "Cathedral WindowCathedral W indowCathedral Window",
+                ["11", "12", "13"],
+                "2",
+                "3",
+                "4",
+            ],
+        ],
+    ],
+    [
+        "CHOCOLATE",
+        [
+            ["Cathedral Gelatin", ["11", "12", "13"], "2", "3", "4"],
+            [
+                "Cathedral ChurchCathedral WindowCathedral",
+                ["11", "12", "13"],
+                "2",
+                "3",
+                "4",
+            ],
+            ["Cathedral Window", ["11", "12", "13"], "2", "3", "4"],
+        ],
+    ],
+]
+
+
+for x in itemdetailed[0][1][0][1]:
+    print(x)

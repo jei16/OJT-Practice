@@ -160,7 +160,6 @@ for items in range(len(itemdetailed) - 1):
     # Item Details
     for y in range(len(itemdetailed[items][1]) - 1):
         if len(itemdetailed[items][1][y][0]) <= 28:
-            
             brdr6 = "{a:│^1}{b:<28}{c:│^1}{d:^6}{e:│^1}{f:^6}{g:│^1}{h:^6}{i:│^1}{j:^6}{k:│^1}"
             print(
                 brdr6.format(
