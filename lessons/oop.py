@@ -7,7 +7,7 @@ class Character:
 
 characterX = Character()
 characterY = Character()
-characterX.name = "JC"
+# characterX.name = "JC"
 characterY.name = "DC"
 characterX.mp = 123
 print(characterX.name)
