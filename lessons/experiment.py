@@ -66,3 +66,4 @@ itemdetailed = [
 ]
 
 print(itemdetailed[0][-1][0][0])
+print(range(8))
