@@ -1,0 +1,18 @@
+tables = [
+    ("gy_20231004",),
+    ("gy_20231006",),
+    ("gy_20231007",),
+    ("gy_20231008",),
+    ("gy_20231005",),
+]
+
+date_tables = []
+for y in range(len(tables)):
+    if tables[y][0][7] == "1" and tables[y][0][8] == "0":
+        add = f"{tables[y][0][9:11]}-Oct"
+        date_tables.append(add)
+
+print(date_tables)
+
+x= [1,2,3,4,"52242336",76,5,32]
+print(f"{x[4][0:5]}")
