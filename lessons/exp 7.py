@@ -9,6 +9,8 @@ query = [
     ("REG", "BANANA CAKE SLICE", "2023-09-25", 5, 41, 42, 43, 44, 45),
     ("REG", "BACON ENSAYMADA", "2023-09-23", 1, 51, 52, 53, 54, 55),
     ("REG", "BACON ENSAYMADA", "2023-09-26", 1, 61, 62, 63, 64, 65),
+    ("REG", "BACON ENSAYMADA", "2023-09-29", 1, 61, 62, 63, 64, 65),
+    ("REG", "BACON ENSAYMADA", "2023-09-30", 14, 61, 62, 63, 64, 65),
 ]
 
 psr_data = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
@@ -50,4 +52,37 @@ for category_info in result:
         grouped_data.append(grouped_item_info)
     final_result.append(grouped_data)
 
-print(final_result)
+# Convert the result to the desired format
+formatted_result = []
+for category_info in final_result:
+    formatted_category_info = [category_info[0]]
+    for item_info in category_info[1:]:
+        formatted_item_info = [item_info[0]]
+        for sub_tuple in item_info[1]:
+            formatted_item_info.extend(sub_tuple)
+        formatted_category_info.append(tuple(formatted_item_info))
+    formatted_result.append(formatted_category_info)
+
+
+# print(formatted_result[0][1][2])
+
+for category in formatted_result:
+    if len(category) <= 2:
+        category.append(('TOTAL',*category[1][1:]))
+    else:
+        total_values = [0] * (len(category[1])-1)  # Initialize with zero
+
+        for multi_item in range(1, len(category)):
+            # print(category[multi_item])
+            item_info = category[multi_item][1:]
+            # print(item_info)
+            # Sum the values from each item's tuples
+            total_values = tuple(x + y for x, y in zip(total_values, item_info))
+            print(total_values)
+            
+                
+            # Append the "TOTAL" tuple with summed values to the category
+        category.append(('TOTAL', total_values))
+
+
+print(formatted_result)
