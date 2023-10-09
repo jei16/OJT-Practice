@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-query = [
+final_query = [
     ("REG", "BUTTER CAKE SLICE", "2023-09-23", 5, 1, 2, 3, 4, 5),
     ("REG", "BUTTER CAKE SLICE", "2023-09-24", 5, 11, 12, 13, 14, 15),
     ("REG", "BUTTER CAKE SLICE", "2023-09-26", 5, 111, 112, 113, 114, 115),
@@ -16,7 +16,7 @@ query = [
 psr_data = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
 # Create a dictionary to store data for each item, date, and category
-for info in query:
+for info in final_query:
     category = info[3]
     item = info[1]
     date = info[2]
@@ -24,7 +24,7 @@ for info in query:
         psr_data[category][item][date].append(value)
 
 # Extract distinct dates from the data
-distinct_dates = sorted(list(set(info[2] for info in query)))
+distinct_dates = sorted(list(set(info[2] for info in final_query)))
 
 # Ensure each item, category, and date has data and fill missing dates with zeros
 for category_data in psr_data.values():
@@ -78,7 +78,7 @@ for category in formatted_result:
             # print(item_info)
             # Sum the values from each item's tuples
             total_values = tuple(x + y for x, y in zip(total_values, item_info))
-            print(total_values)
+            # print(total_values)
             
                 
             # Append the "TOTAL" tuple with summed values to the category
