@@ -3,14 +3,15 @@ from collections import defaultdict
 final_query = [
     ("REG", "BUTTER CAKE SLICE", "2023-09-23", 5, 1, 2, 3, 4, 5),
     ("REG", "BUTTER CAKE SLICE", "2023-09-24", 5, 11, 12, 13, 14, 15),
-    #("REG", "BUTTER CAKE SLICE", "2023-09-26", 5, 111, 112, 113, 114, 115),
+    ("REG", "BUTTER CAKE SLICE", "2023-09-26", 5, 111, 112, 113, 114, 115),
     ("REG", "BANANA CAKE SLICE", "2023-09-23", 5, 21, 22, 23, 24, 25),
-    #("REG", "BANANA CAKE SLICE", "2023-09-24", 5, 31, 32, 33, 34, 35),
+    ("REG", "BANANA CAKE SLICE", "2023-09-24", 5, 31, 32, 33, 34, 35),
     ("REG", "BANANA CAKE SLICE", "2023-09-25", 5, 41, 42, 43, 44, 45),
     ("REG", "BACON ENSAYMADA", "2023-09-23", 1, 51, 52, 53, 54, 55),
-    #("REG", "BACON ENSAYMADA", "2023-09-26", 1, 61, 62, 63, 64, 65),
-    #("REG", "BACON ENSAYMADA", "2023-09-29", 1, 61, 62, 63, 64, 65),
-    #("REG", "GELATO", "2023-09-30", 14, 61, 62, 63, 64, 65),
+    ("REG", "BACON ENSAYMADA", "2023-09-26", 1, 61, 62, 63, 64, 65),
+    ("REG", "BACON ENSAYMADA", "2023-09-29", 1, 61, 62, 63, 64, 65),
+    ("REG", "GELATO", "2023-09-30", 14, 61, 62, 63, 64, 65),
+    ("REG", "SPECIAL PALABOK", "2023-10-11", 18, 61, 62, 63, 64, 64445),
 ]
 
 psr_data = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
@@ -70,25 +71,43 @@ for category in formatted_result:
     # if len(category) <= 2:
     #     category.append(('TOTAL',*category[1][1:]))
     # else:
-    
-    total_values = [0] * (len(category[1])-1) # Initialize with zero
-    # grand_total_values = [0] * (len(category[1])-1) 
+
+    total_values = [0] * (len(category[1]) - 1)  # Initialize with zero
+    # grand_total_values = [0] * (len(category[1])-1)
 
     for multi_item in range(1, len(category)):
         item_info = category[multi_item][1:]
         # print(item_info)
         total_values = [x + y for x, y in zip(total_values, item_info)]
-            # Append the "TOTAL" tuple with summed values to the category
+        # Append the "TOTAL" tuple with summed values to the category
         # print(total_values)
     # print(total_values)
-    category.append(("TOTAL",) + tuple(total_values))
+    category.append(
+        [
+            "TOTAL",
+        ]
+        + total_values
+    )
 
-grand_total_values = [0] * (len(category[1])-1)
+grand_total_values = [0] * (len(category[1]) - 1)
 for category in formatted_result:
     grand_items = category[-1][1:]
     grand_total_values = [x + y for x, y in zip(grand_total_values, grand_items)]
-            
-formatted_result.append([None,('GRAND TOTAL',)+tuple(grand_total_values)])
- 
+
+formatted_result.append(
+    [
+        None,
+        [
+            "GRAND TOTAL",
+        ]
+        + grand_total_values,
+    ]
+)
+
+#FOR ADDING THE CATEGORY NAME IN TOTAL #NEW 
+for category in formatted_result[:len(formatted_result)-1]:
+    if category[0] != "ALL CATEGORIES": #replace category[0] to nm_cb
+        category[-1][0] = f"{category[0]} TOTAL"
+
 
 print(formatted_result)
