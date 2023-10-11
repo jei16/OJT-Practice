@@ -72,21 +72,23 @@ for category in formatted_result:
     # else:
     
     total_values = [0] * (len(category[1])-1) # Initialize with zero
-    grand_total_values = [0] * (len(category[1])-1) 
+    # grand_total_values = [0] * (len(category[1])-1) 
 
     for multi_item in range(1, len(category)):
         item_info = category[multi_item][1:]
+        # print(item_info)
         total_values = [x + y for x, y in zip(total_values, item_info)]
             # Append the "TOTAL" tuple with summed values to the category
-        
-        grand_item_info = category[-1][1:]
-        grand_total_values = [x + y for x, y in zip(grand_total_values, grand_item_info)]
-
+        # print(total_values)
+    # print(total_values)
     category.append(("TOTAL",) + tuple(total_values))
 
-
-    formatted_result.append([None,("GRAND TOTAL",)+tuple(grand_total_values)])
-
-
+grand_total_values = [0] * (len(category[1])-1)
+for category in formatted_result:
+    grand_items = category[-1][1:]
+    grand_total_values = [x + y for x, y in zip(grand_total_values, grand_items)]
+            
+formatted_result.append([None,('GRAND TOTAL',)+tuple(grand_total_values)])
+ 
 
 print(formatted_result)
